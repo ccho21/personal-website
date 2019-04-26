@@ -1,0 +1,100 @@
+@-webkit-keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-center {
+    0% {
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.alert-enter-active {
+    opacity: 0;
+    & .project-detail__container {
+        transform: scale(0.2);
+        transition: transform 300ms;
+    }
+}
+.alert-enter-done {
+    opacity: 1;
+    & .project-detail__container {
+        transform: scale(1);
+        transition: transform 300ms;
+    }
+    transition: opacity 500ms;
+}
+
+.alert-exit {
+    opacity: 1;
+    & .project-detail__container {
+        transition: transform 300ms;
+        transform: scale(1);
+    }
+}
+.alert-exit-active {
+    opacity: 0;
+    & .project-detail__container {
+        transition: transform 300ms;
+        transform: scale(0.5);
+    }
+    transition: opacity 300ms, transform 300ms;
+}
+
+.page-enter {
+    opacity: 0;
+    transform: translate(-250px, 0);
+    transform: translate3d(-250px, 0, 0);
+}
+.page-enter.page-enter-active {
+    opacity: 1;
+    transition: opacity 1s ease;
+    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+.page-leave {
+    opacity: 1;
+    transform: translate(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    transition-property: transform, opacity;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.175, 0.665, 0.32, 1), linear;
+}
+.page-leave.page-leave-active {
+    opacity: 0;
+    transform: translate(250px, 0);
+    transform: translate3d(250px, 0, 0);
+}
+.page-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.page-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+}
+
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 250ms ease-in;
+}

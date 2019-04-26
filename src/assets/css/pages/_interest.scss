@@ -1,0 +1,24 @@
+.interest {
+    &-list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        & img {
+            width: 8rem;
+            height: 8rem;
+            
+        }
+        & > li {
+            z-index: 0;
+            position: relative;
+            & a {
+                display: block;
+            }
+           
+        }
+        &:hover img {
+            animation: rotate-center 1s;
+        }
+    }
+}

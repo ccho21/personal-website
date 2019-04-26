@@ -1,0 +1,33 @@
+// LIBRARIES
+@import "~bootstrap/scss/bootstrap";
+
+//ABSTRACT
+@import "./abstract/mixin";
+
+// BASE
+@import "./base/variables";
+@import "./base/base";
+@import "./base/typography";
+@import "./base/animation";
+
+// COMPONENTS 
+@import "./components/scroll";
+@import "./components/section-line";
+@import "./components/project";
+@import "./components/project-detail";
+@import "./components//searchBar";
+
+// LAYOUTS
+@import "./layouts/navigation";
+@import "./layouts/background";
+
+//pages
+@import "./pages/home";
+@import "./pages/main-page";
+@import "./pages/profile";
+@import "./pages/resume";
+@import "./pages/projects";
+@import "./pages/contact";
+@import "./pages/testimonial";
+@import "./pages/interest";
+@import "./pages/coding-skill";

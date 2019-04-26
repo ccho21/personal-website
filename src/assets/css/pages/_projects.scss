@@ -1,0 +1,59 @@
+.projects {
+    &-container {
+        display: flex;
+        flex-wrap: wrap; 
+        margin: 0 -1rem;
+    }
+    .search {
+        width: 100%;
+        text-align:right;
+    }
+    
+}
+.project-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    .search-by-query {
+        flex: 0 0 40%;
+        
+    }
+    .filter-by-tags {
+        padding: 0;
+        list-style: none;
+        font-size: 1.3rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        width: 50%;
+        margin-left: auto;
+        & > li {
+            border: .3rem solid white;
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+            padding: .5rem;
+            cursor: pointer;
+            transition: border .3s ease;
+            &:hover {
+                border: .3rem solid #eee;
+            }
+        }
+        .tag-active {
+            border: .3rem solid $main-color-green !important;
+        }
+    }
+}

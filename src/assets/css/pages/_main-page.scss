@@ -1,0 +1,72 @@
+.main-page {
+    &__image-box {
+        position: relative;
+        overflow: hidden;
+        background: url("../images/temp-profile.jpg");
+        min-height: 30rem;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__text-box {
+        padding: 6rem 12%;
+        & h5 {
+            margin-bottom: 1rem;
+        }
+        & h1 {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .social-network {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        & > li {
+            margin: 0 0.5rem;
+            &:hover {
+                & i {
+                    color: $main-color-green;
+                    animation: rotate-center 0.5s ease-out;
+                }
+                & a {
+                    border-color: $main-color-green;
+                    background-color: $main-color-white;
+                }
+            }
+        }
+        & a {
+            display: block;
+            width: 6rem;
+            height: 6rem;
+            border: 0.5rem $main-color-white solid;
+            border-radius: 50%;
+            color: $main-color-white;
+            text-decoration: none;
+            transition: border-color 0.5s ease, background-color 0.5s ease;
+            & > i {
+                font-size: 2.7rem;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: color 0.5s ease;
+            }
+        }
+    }
+}
+.service {
+  &__title {
+  }
+  &__detail {
+    display: flex;
+    flex-direction: row;
+    & i {
+      font-size: 4rem;
+      padding: 0 2rem 2rem 2rem;
+    }
+  }
+}

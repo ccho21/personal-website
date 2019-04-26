@@ -1,0 +1,105 @@
+.contact {
+    .profile-image {
+        width: 100%;
+        height: 50rem;
+        margin-bottom: 5rem;
+    }
+    &-container {
+      padding:3rem;
+    }
+    &__info {
+        background-color: $main-color-white;
+        color: $main-color-black;
+        margin-bottom: 3rem;
+        font-size: 1.7rem;
+        & h4 {
+            font-size: 2rem;
+            font-family: Oswald, sans-serif;
+            margin-bottom: 2rem;
+            letter-spacing: 0.1rem;
+        }
+        & li {
+            margin-bottom: 1rem;
+            & > i {
+              margin-right: 1rem;
+            }
+        }
+        & span {
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        & p,
+        & a {
+            padding-left: 1rem;
+        }
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        list-style: none;
+        margin-bottom: 0;
+        padding: 3rem;
+        & input[type="submit"] {
+            font-size: 1.5rem;
+            background-color: $main-color-green;
+            color: $main-color-white;
+        }
+
+        &-item {
+            flex: 0 0 100%;
+            max-width: 100%;
+            position: relative;
+            margin-bottom: 1rem;
+
+            &:not(:last-of-type) {
+                & input {
+                    height: 4rem;
+                    width: 100%;
+                }
+                & input,
+                & textarea {
+                    border: none;
+                    padding: 0 1rem;
+                    background-color: rgba(0, 0, 0, 0.6);
+                    color: $main-color-white;
+                    &::placeholder {
+                        color: $main-color-white;
+                    }
+                    &:focus::-webkit-input-placeholder {
+                        color: transparent;
+                    }
+                    &:focus {
+                        outline: none;
+                    }
+                    &:focus + label {
+                        // animation: barGrow .5s;
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &-label {
+                position: absolute;
+                background-color: $main-color-green;
+                padding: 0;
+                margin: 0;
+                bottom: -0.2rem;
+                left: 0;
+                height: 0.2rem;
+                width: 100%;
+                opacity: 0;
+            }
+
+            .textarea-box {
+                height: 15rem;
+                & textarea {
+                    height: 100%;
+                    width: 100%;
+                    outline: none;
+                    padding-top: 1rem;
+                }
+            }
+        }
+    }
+}

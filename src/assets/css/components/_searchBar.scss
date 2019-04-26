@@ -1,0 +1,32 @@
+.search-bar {
+    & input {
+        border: none;
+        padding: 0 1rem;
+        color: white;
+        height: 4rem;
+        width: 100%;
+        font-size: 2rem; 
+        border: .2rem #333333 solid;
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            border-color: #333333;
+        }
+    }
+
+    & button {
+        border: .2rem #333333 solid;
+        border-left: none;
+        background-color: transparent;
+        color: #333333;
+        font-size: 1.8rem;
+        
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+        &:hover, &:active {
+            background-color: $main-color-green !important;
+        }
+    }
+}
